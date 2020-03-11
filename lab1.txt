@@ -1,0 +1,61 @@
+// Exercise 1
+
+function stringCapitalize(str){
+  var result = str.toLowerCase().split(' ');
+  for(let i=0; i< result.length; i++){
+    result[i] = result[i].charAt(0).toUpperCase() + result[i].slice(1); 
+  }
+  //return result.join(' '); 
+  console.log(result.join(' '));
+}
+
+stringCapitalize("neeraj bhasin");
+
+//Exercise 2
+function greaterNumber(num1, num2, num3){
+  if (num1 > num2 && num1 > num3){
+    console.log(`${num1} is greatest number!`);
+  }
+  else if(num2 > num1 && num2> num3){
+    console.log(`${num2} is greatest number!`);
+  }
+  else{
+    console.log(`${num3} is greatest number!`);
+  }
+}
+
+greaterNumber(100,200,10000);
+
+//Exercise 3
+
+function right(str){
+  let first = str.slice(0,-3);
+  let lastThree = str.slice(-3);
+
+  let result = lastThree + first;
+  console.log('~.~.~.~.~.~.~.~.~.~');
+  console.log(result);
+  
+}
+
+right("henry");
+
+//Exercise 4
+
+function angle(ang){
+  if(ang < 90){
+    console.log('This is Acute angle.');
+  }
+  else if(ang == 90){
+    console.log('This is right angle.');
+  }
+  else if(ang < 180){
+    console.log('This is obtuse angle.');
+  }
+  else{
+    console.log('This is straight angle.');
+  }
+}
+
+angle(160);
+
