@@ -3,6 +3,7 @@ const url = require('url');
 const hostname = '127.0.0.1';
 const port = 4000;
 
+var amount;
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
@@ -10,7 +11,7 @@ const server = http.createServer((req, res) => {
     // res.end('Hello world\n');
     // let URL = url.parse(req.url,true); 
     let abc = url.parse(req.url,true).query; 
-    var amount;
+    
     if(req.url === '/spin'){
         console.log('spinning')
         console.log('amount lost:' + amount);
